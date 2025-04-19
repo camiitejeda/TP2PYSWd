@@ -4,6 +4,31 @@
     color: #643ebb;
 }
 
+
+
+.filters h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-weight: bolder;
+    color: #643ebb;
+}
+
+.gallery h2 {
+  font-family: 'Boldonse', sans-serif;
+    font-weight: bolder;
+    color: #643ebb;
+    
+}
+
+.horarios h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-weight: bolder;
+    color: #643ebb;
+    text-align: center;
+    color: #643ebb;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 .btn-filter {
     margin: 0 10px 10px;
     padding: 10px 20px;
@@ -70,13 +95,6 @@
     padding: 0 20px;
 }
 
-.horarios h2 {
-    text-align: center;
-    color: #643ebb;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: 'montserrat';
-}
 
 #tabla-horarios {
     width: 100%;
@@ -195,4 +213,38 @@
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 700;
+}
+
+#masonry-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Cada card */
+#masonry-grid > div {
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+    transition: all 0.3s ease;
+}
+
+/* Centrado si hay una sola */
+#masonry-grid.single-item {
+    justify-content: center;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    #masonry-grid > div {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    /* Si solo hay una card, que ocupe todo el ancho disponible */
+    #masonry-grid.single-item > div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }

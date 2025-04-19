@@ -5,11 +5,22 @@ $(document).ready(function () {
         $(".btn-filter").removeClass("active");
         $(this).addClass("active");
 
+        const $cards = $("#masonry-grid > div");
+
         if (filter === "all") {
-            $("#masonry-grid > div").show();
+            $cards.show();
+            $("#masonry-grid").removeClass("single-item");
         } else {
-            $("#masonry-grid > div").hide();
-            $("#masonry-grid > div." + filter).show();
+            $cards.hide();
+            const $filtered = $cards.filter("." + filter);
+            $filtered.show();
+
+            // Si solo hay un elemento, centramos
+            if ($filtered.length === 1) {
+                $("#masonry-grid").addClass("single-item");
+            } else {
+                $("#masonry-grid").removeClass("single-item");
+            }
         }
     });
 });
