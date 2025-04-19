@@ -1,0 +1,155 @@
+/* Estilos para el botón en el header */
+#mobileMenuBtn {
+    background-color: transparent; /* Botón transparente */
+    border: none; /* Sin borde */
+    color: white; /* Ícono blanco */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 40%; /* MÁS ABAJO que antes */
+    right: 20px; /* A la derecha */
+    z-index: 1000; /* Por encima de otros elementos */
+    transform: translateY(0); /* Alineación vertical */
+}
+
+/* Hacer el ícono más grande */
+#mobileMenuBtn i {
+    color: white;
+    font-size: 2rem;
+}
+
+#mobileMenuBtn:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+.navbar-nav a{
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #643ebb;
+}
+
+
+/* Estilo para la sección Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Ajusta la altura para que el video no ocupe más de la mitad de la pantalla */
+    max-height: 500px; /* Limita la altura máxima para pantallas grandes */
+    overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+}
+
+/* Contenedor del video */
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo del video */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el video */
+    object-fit: cover; /* Mantiene la proporción del video y cubre el contenedor */
+    width: 100%;
+    height: 100%;
+    max-height: 100%; /* No deja que el video sobrepase el contenedor */
+}
+
+/* Contenido centrado en la sección Hero */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+/* Título */
+.hero-content h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Ajusta el tamaño del texto según el ancho de la pantalla */
+    animation: fadeIn 2s ease;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Animación en las cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Animación de spinner */
+#spinner {
+    margin-top: 10px;
+}
+
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+    z-index: 2000;
+    position: absolute;
+    top: 60px; /* Ajustá este valor según la altura que querés */
+    right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+    position: relative;
+}
+
+.desplegar {
+    background: none;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.desplegar span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #634ebb;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    margin-top: 10px;
+    width: max-content;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+    display: block;
+}
+
+.mega-menu li {
+    margin: 10px 0;
+}
+
+.mega-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}

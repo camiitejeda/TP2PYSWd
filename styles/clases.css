@@ -1,0 +1,180 @@
+.navbar-nav a{
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #643ebb;
+}
+
+
+/* Galería tipo Masonry (CSS Grid) */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Efecto hover en las tarjetas */
+.card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destacar las tarjetas */
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+/* Tabla de horarios */
+.horarios {
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.horarios h2 {
+    text-align: center;
+    color: #643ebb;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'montserrat';
+}
+
+#tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(100, 62, 187, 0.2);
+}
+
+#tabla-horarios th {
+    background-color: #643ebb;
+    color: white;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'montserrat';
+    text-align: center;
+}
+
+#tabla-horarios td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-family: 'montserrat';
+    background-color: #f3ecff;
+}
+
+#tabla-horarios tr:nth-child(odd) td {
+    background-color: #e9ddff;
+}
+
+#tabla-horarios tr:hover td {
+    background-color: #d4c1ff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#tabla-horarios td:first-child {
+    font-weight: bold;
+}
+
+/* Tabla responsiva sin scroll: se achica proporcionalmente */
+@media screen and (max-width: 768px) {
+    #tabla-horarios th,
+    #tabla-horarios td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Extra: mejora visual en pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    #tabla-horarios th,
+    #tabla-horarios td {
+        font-size: 11px;
+        padding: 6px;
+    }
+}
+
+
+
+
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+    z-index: 2000;
+    position: absolute;
+    top: 60px; /* Ajustá este valor según la altura que querés */
+    right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+    position: relative;
+}
+
+.desplegar {
+    background: none;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.desplegar span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #634ebb;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    margin-top: 10px;
+    width: max-content;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+    display: block;
+}
+
+.mega-menu li {
+    margin: 10px 0;
+}
+
+.mega-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}

@@ -1,0 +1,83 @@
+.navbar-nav a{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #643ebb;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    color: #3f287b;
+    font-weight: bold;
+  }
+  
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+
+  
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+  z-index: 2000;
+  position: absolute;
+  top: 60px; /* Ajustá este valor según la altura que querés */
+  right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+  position: relative;
+}
+
+.desplegar {
+  background: none;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.desplegar span {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #634ebb;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  margin-top: 10px;
+  width: max-content;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+  display: block;
+}
+
+.mega-menu li {
+  margin: 10px 0;
+}
+
+.mega-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}

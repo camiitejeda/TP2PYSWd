@@ -1,0 +1,155 @@
+.navbar-nav a{
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #643ebb;
+}
+
+/* Estilos para las tarjetas flip */
+.card-container {
+    perspective: 1000px; /* Para darle perspectiva 3D */
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d; /* Mantener las caras de la tarjeta en 3D */
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: rotateY(180deg); /* Gira la tarjeta cuando se pasa el mouse */
+}
+
+.card-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden; /* Oculta la parte trasera cuando rota */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-front {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-back {
+    background: #f1f1f1;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+
+/* Estilos para las barras de habilidades dentro de la tarjeta */
+.habilidades {
+    margin-top: 20px;
+    text-align: left;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+}
+
+progress[value] {
+    appearance: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #643ebb;
+    border-radius: 10px;
+}
+
+/* Estilo general */
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #643ebb;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+    z-index: 2000;
+    position: absolute;
+    top: 60px; /* Ajustá este valor según la altura que querés */
+    right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+    position: relative;
+}
+
+.desplegar {
+    background: none;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.desplegar span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #634ebb;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    margin-top: 10px;
+    width: max-content;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+    display: block;
+}
+
+.mega-menu li {
+    margin: 10px 0;
+}
+
+.mega-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}

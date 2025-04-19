@@ -1,0 +1,112 @@
+.navbar-nav a{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #643ebb;
+}
+
+
+/* Estilo tipo revista */
+#blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Comentarios con avatar */
+  .comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .comment .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 1rem;
+    position: relative;
+  }
+  
+  .comment .avatar::after {
+    content: '';
+    background: url('../images/avatar-sprite.png') no-repeat -10px -10px;
+    background-size: 100px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .comment .content {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+  }
+  
+  /* Animación de AOS */
+  [data-aos] {
+    transition: all 0.6s ease-in-out !important;
+  }
+  
+
+
+  
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+  z-index: 2000;
+  position: absolute;
+  top: 60px; /* Ajustá este valor según la altura que querés */
+  right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+  position: relative;
+}
+
+.desplegar {
+  background: none;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.desplegar span {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #634ebb;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  margin-top: 10px;
+  width: max-content;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+  display: block;
+}
+
+.mega-menu li {
+  margin: 10px 0;
+}
+
+.mega-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}

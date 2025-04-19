@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Fitness - Shiro Center</title>
+
+  <!-- Bootstrap CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <!-- Bootstrap Icons desde CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <!-- Font Awesome desde CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Boxicons desde CDN -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- AOS (Animate On Scroll) desde CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="styles/blog.css" />
+</head>
+
+<body>
+
+
+<!-- NAVBAR solo para escritorio -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
+  <div class="container-fluid justify-content-between">
+      <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Shiro Center Logo" height="50">
+      </a>
+      <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrenadores.html">Entrenadores</a></li>
+          <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="formulario.html">Contacto</a></li>
+      </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="position-relative">
+  <picture>
+      <source media="(min-width: 992px)" srcset="images/header1.png">
+      <img src="images/header.png" alt="Header" class="img-fluid w-100">
+  </picture>
+
+  <!-- Menú móvil dentro del header (solo visible en móviles) -->
+  <div class="mobile-menu-container d-lg-none">
+      <nav class="menu">
+          <input type="checkbox" id="toggle-menu" hidden />
+          <label for="toggle-menu" class="desplegar"><span>☰</span></label>
+          <ul class="mega-menu">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="clases.html">Clases</a></li>
+              <li><a href="entrenadores.html">Entrenadores</a></li>
+              <li><a href="precios.html">Precios</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="formulario.html">Formulario</a></li>
+          </ul>
+      </nav>
+  </div>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Blog Fitness</h1>
+
+    <!-- Filtros por tags -->
+    <div class="mb-4 text-center">
+      <button class="btn btn-outline-primary filter-btn" data-filter="all">Todos</button>
+      <button class="btn btn-outline-success filter-btn" data-filter="nutrición">Nutrición</button>
+      <button class="btn btn-outline-warning filter-btn" data-filter="rutinas">Rutinas</button>
+      <button class="btn btn-outline-danger filter-btn" data-filter="tips">Tips</button>
+    </div>
+
+    <!-- Grid de artículos -->
+    <div class="row g-4" id="blog-container">
+      <div class="col-md-6 blog-item nutrición" data-aos="fade-up">
+        <div class="card h-100">
+          <img src="images/nutricion.jpg" class="card-img-top" alt="Nutrición">
+          <div class="card-body">
+            <h5 class="card-title">5 comidas ideales post entrenamiento</h5>
+            <p class="card-text">Descubre qué alimentos ayudan a recuperar tus músculos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 blog-item rutinas" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100">
+          <img src="images/rutina.jpg" class="card-img-top" alt="Rutina">
+          <div class="card-body">
+            <h5 class="card-title">Rutina para fortalecer el core</h5>
+            <p class="card-text">Una rutina ideal para mejorar tu postura y resistencia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 blog-item tips" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100">
+          <img src="images/tips.jpg" class="card-img-top" alt="Tips">
+          <div class="card-body">
+            <h5 class="card-title">5 consejos para mantener la constancia</h5>
+            <p class="card-text">Motivación y claves para seguir tu plan de entrenamiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comentarios -->
+    <section class="comments mt-5">
+      <h2>Comentarios</h2>
+      <div class="comment">
+        <div class="avatar"></div>
+        <div class="content">
+          <strong>Carlos</strong>: Muy útil la rutina de core, gracias!
+          <button class="btn btn-sm btn-outline-secondary btn-responder">Responder</button>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="avatar"></div>
+        <div class="content">
+          <strong>Ana</strong>: Agregaría algún tip más sobre la hidratación.
+          <button class="btn btn-sm btn-outline-secondary btn-responder">Responder</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <!-- jQuery desde CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- AOS desde CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Script personalizado -->
+  <script src="js/blog.js"></script>
+</body>
+
+</html>

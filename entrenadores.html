@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores - Shiro Center</title>
+
+    <!-- Bootstrap 5 CSS desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Font Awesome desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles/entrenadores.css">
+</head>
+<body>
+<!-- NAVBAR solo para escritorio -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
+    <div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Shiro Center Logo" height="50">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="entrenadores.html">Entrenadores</a></li>
+            <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+            <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="formulario.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="position-relative">
+    <picture>
+        <source media="(min-width: 992px)" srcset="images/header1.png">
+        <img src="images/header.png" alt="Header" class="img-fluid w-100">
+    </picture>
+
+    <!-- Menú móvil dentro del header (solo visible en móviles) -->
+    <div class="mobile-menu-container d-lg-none">
+        <nav class="menu">
+            <input type="checkbox" id="toggle-menu" hidden />
+            <label for="toggle-menu" class="desplegar"><span>☰</span></label>
+            <ul class="mega-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Sección de Entrenadores -->
+    <section class="entrenadores py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Conoce a Nuestros Entrenadores</h2>
+            <div class="row">
+                <!-- Entrenador 1 -->
+                <div class="col-md-4">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="trainer1.jpg" alt="Entrenador 1" class="card-img-top">
+                                    <h5>Juan Pérez</h5>
+                                </div>
+                                <div class="card-back">
+                                    <p>Especialidad: Yoga</p>
+                                    <p>Contacto: juan@example.com</p>
+                                    <!-- Barras de habilidades dentro de la tarjeta -->
+                                    <div class="habilidades">
+                                        <label for="fuerza">Fuerza</label>
+                                        <progress id="fuerza" value="0" max="100"></progress>
+                                    </div>
+                                    <div class="habilidades">
+                                        <label for="flexibilidad">Flexibilidad</label>
+                                        <progress id="flexibilidad" value="0" max="100"></progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrenador 2 -->
+                <div class="col-md-4">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="trainer2.jpg" alt="Entrenador 2" class="card-img-top">
+                                    <h5>Ana Gómez</h5>
+                                </div>
+                                <div class="card-back">
+                                    <p>Especialidad: Pilates</p>
+                                    <p>Contacto: ana@example.com</p>
+                                    <!-- Barras de habilidades dentro de la tarjeta -->
+                                    <div class="habilidades">
+                                        <label for="cardio">Cardio</label>
+                                        <progress id="cardio" value="0" max="100"></progress>
+                                    </div>
+                                    <div class="habilidades">
+                                        <label for="resistencia">Resistencia</label>
+                                        <progress id="resistencia" value="0" max="100"></progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrenador 3 -->
+                <div class="col-md-4">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="trainer3.jpg" alt="Entrenador 3" class="card-img-top">
+                                    <h5>Carlos López</h5>
+                                </div>
+                                <div class="card-back">
+                                    <p>Especialidad: Entrenamiento Funcional</p>
+                                    <p>Contacto: carlos@example.com</p>
+                                    <!-- Barras de habilidades dentro de la tarjeta -->
+                                    <div class="habilidades">
+                                        <label for="fuerza2">Fuerza</label>
+                                        <progress id="fuerza2" value="0" max="100"></progress>
+                                    </div>
+                                    <div class="habilidades">
+                                        <label for="flexibilidad2">Flexibilidad</label>
+                                        <progress id="flexibilidad2" value="0" max="100"></progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 5 JS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts personalizados -->
+    <script src="js/entrenadores.js"></script>
+</body>
+</html>
+
