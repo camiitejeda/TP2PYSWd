@@ -1,19 +1,15 @@
 $(document).ready(function () {
-    // Filtrado de clases por categoría
-    $("input[type='checkbox']").on('change', function () {
-        var selectedCategories = [];
-        $("input[type='checkbox']:checked").each(function () {
-            selectedCategories.push($(this).val());
-        });
+    $(".btn-filter").click(function () {
+        var filter = $(this).attr("data-filter");
 
-        // Filtra los elementos de la galería
-        $('#masonry-grid > div').each(function () {
-            var categories = $(this).attr('class').split(' ');
-            if (selectedCategories.length === 0 || categories.some(cat => selectedCategories.includes(cat))) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
+        $(".btn-filter").removeClass("active");
+        $(this).addClass("active");
+
+        if (filter === "all") {
+            $("#masonry-grid > div").show();
+        } else {
+            $("#masonry-grid > div").hide();
+            $("#masonry-grid > div." + filter).show();
+        }
     });
 });

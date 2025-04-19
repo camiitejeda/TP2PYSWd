@@ -4,6 +4,24 @@
     color: #643ebb;
 }
 
+.btn-filter {
+    margin: 0 10px 10px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 2px solid #643ebb;
+    color: #643ebb;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background-color: #643ebb;
+    color: white;
+}
+
 
 /* Galería tipo Masonry (CSS Grid) */
 #gallery {
