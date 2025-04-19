@@ -17,6 +17,12 @@
 
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles/index.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -77,81 +83,178 @@
 
 <!-- Clases Destacadas -->
 <div class="container py-5">
-    <h2 class="text-center mb-4">Clases Destacadas</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+    <h2 class="text-center mb-4">CLASES DESTACADAS</h2>
+    <div class="row justify-content-center g-4">
+        <!-- Clase Yoga -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
                 <img src="images/yoga.jpg" class="card-img-top" alt="Clase de Yoga">
                 <div class="card-body">
-                    <h5 class="card-title">Yoga para Todos</h5>
+                    <h5 class="card-title text-center text-purple">Yoga para Todos</h5>
                     <p class="card-text">Disfruta de clases de yoga para todos los niveles.</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+
+        <!-- Clase Pilates -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
                 <img src="images/pilates.jpg" class="card-img-top" alt="Clase de Pilates">
                 <div class="card-body">
-                    <h5 class="card-title">Pilates</h5>
+                    <h5 class="card-title text-center text-purple">Pilates</h5>
                     <p class="card-text">Mejora tu flexibilidad y fuerza con pilates.</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+
+        <!-- Clase Gimnasio -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
                 <img src="images/gimnasio.jpg" class="card-img-top" alt="Clase de Gimnasio">
                 <div class="card-body">
-                    <h5 class="card-title">Entrenamiento de Fuerza</h5>
+                    <h5 class="card-title text-center text-purple">Entrenamiento de Fuerza</h5>
                     <p class="card-text">Potencia tu cuerpo con nuestro entrenamiento especializado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nueva Clase de Cardio -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
+                <img src="images/cardio.jpg" class="card-img-top" alt="Clase de Cardio">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-purple">Cardio Intenso</h5>
+                    <p class="card-text">Aumenta tu resistencia y quema calorías con nuestras clases de cardio intensivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nueva Clase de Zumba -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
+                <img src="images/zumba.jpg" class="card-img-top" alt="Clase de Zumba">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-purple">Zumba</h5>
+                    <p class="card-text">Baila, diviértete y tonifica con nuestras energéticas clases de Zumba.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nueva Clase de HIIT -->
+        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+            <div class="card shadow-lg border-0" style="width: 18rem; border-radius: 15px;">
+                <img src="images/hiit.jpg" class="card-img-top" alt="Clase de HIIT">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-purple">HIIT - Entrenamiento de Alta Intensidad</h5>
+                    <p class="card-text">Siente la intensidad y mejora tu rendimiento con HIIT.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Testimonios (Carrusel) -->
-<div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <p>"Shiro Center cambió mi vida, ¡super recomendado!"</p>
-            <footer>- Juan Pérez</footer>
+
+
+<!-- Testimonios Mejorados -->
+<section class="testimonios-section py-5 text-white bg-dark">
+    <div class="container text-center">
+        <h2 class="mb-4">Lo que dicen nuestros miembros</h2>
+
+        <!-- Carrusel de testimonios -->
+        <div id="testimonialsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="testimonial-card">
+                        <p>"Shiro Center cambió mi vida, ¡super recomendado!"</p>
+                        <footer>- Juan Pérez</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="testimonial-card">
+                        <p>"Las clases son excelentes y el ambiente es increíble."</p>
+                        <footer>- Laura Gómez</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="testimonial-card">
+                        <p>"Un gimnasio con entrenadores de alta calidad. ¡Muy feliz!"</p>
+                        <footer>- Carlos Méndez</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <div class="carousel-item">
-            <p>"Las clases son excelentes y el ambiente es increíble."</p>
-            <footer>- Laura Gómez</footer>
-        </div>
-        <div class="carousel-item">
-            <p>"Un gimnasio con entrenadores de alta calidad. ¡Muy feliz!"</p>
-            <footer>- Carlos Méndez</footer>
-        </div>
+
+        <!-- Formulario para nuevo testimonio -->
+<h4 class="mb-3">¿Ya nos visitaste?</h4>
+<p>¡Contanos tu experiencia! Nos encantaría conocer tu opinión.</p>
+
+<form id="form-testimonio" class="mt-3" novalidate>
+    <div class="mb-3">
+        <input type="text" id="nombre" class="form-control" placeholder="Tu nombre">
+        <div class="invalid-feedback">Por favor, ingresá tu nombre.</div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+    <div class="mb-3">
+        <textarea id="mensaje" class="form-control" rows="3" placeholder="Tu testimonio"></textarea>
+        <div class="invalid-feedback">Por favor, escribí tu testimonio.</div>
+    </div>
+    <button type="submit" class="btn btn-light text-purple">Enviar testimonio</button>
+</form>
+
+<!-- Mensaje de éxito -->
+<div id="mensaje-exito" class="alert alert-success mt-4 d-none">
+    ¡Gracias por compartir tu experiencia!
 </div>
 
-<!-- Footer con Formulario -->
-<footer class="bg-light py-5">
-    <div class="container">
-        <form id="newsletter-form">
-            <div class="input-group">
-                <input type="email" class="form-control" placeholder="Ingresa tu correo" required>
-                <button class="btn btn-primary" type="submit">Suscribirse</button>
-            </div>
-            <div id="spinner" class="spinner-border text-primary" role="status" style="display:none;">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </form>
-        <div class="mt-3">
-            <iframe src="https://www.google.com/maps/embed?..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
     </div>
-</footer>
+</section>
+
+
+
+
+<footer class="footer-separado">
+    <div class="footer-wrapper">
+      <div class="footer-row">
+        <!-- Mapa a la izquierda -->
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+  
+        <!-- Info y redes -->
+        <div class="footer-info">
+          <h4>Dirección</h4>
+          <p>1234 Calle Ejemplo, Ciudad, País</p>
+  
+          <h4>Redes Sociales</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+  
+          <h4>Suscríbete a nuestro Newsletter</h4>
+          <form id="newsletter-footer-form" method="POST">
+            <div class="input-group">
+              <input type="email" class="form-control" id="footer-email" placeholder="Tu correo electrónico" required>
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-light">
+                  <span id="footer-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                  Enviar
+                </button>
+              </div>
+            </div>
+            <div class="invalid-feedback" id="footer-error" style="display: none;">Por favor, ingresa un correo válido.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>  
+  
 
 <!-- jQuery desde CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -172,6 +275,37 @@
         menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
     });
 </script>
+
+<script>
+    $(document).ready(function() {
+      $("#newsletter-form").on("submit", function(event) {
+        event.preventDefault();
+        
+        var email = $("#email").val();
+        
+        // Validación del correo electrónico
+        if (validateEmail(email)) {
+          // Mostrar el spinner
+          $("#spinner").show();
+          
+          // Simulamos una llamada de backend con un timeout
+          setTimeout(function() {
+            $("#spinner").hide();
+            alert("¡Te has suscrito con éxito!");
+          }, 2000); // El tiempo de espera puede ser ajustado
+        } else {
+          // Mostrar mensaje de error
+          $(".invalid-feedback").show();
+        }
+      });
+  
+      // Función de validación de correo electrónico
+      function validateEmail(email) {
+        var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return regex.test(email);
+      }
+    });
+  </script>
 
 </body>
 

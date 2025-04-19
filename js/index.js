@@ -1,37 +1,74 @@
-// Activar el contador animado con CountUp.js
-$(document).ready(function() {
-    var countUp = new CountUp('counter', 0, 500, 0, 2.5);
-    if (!countUp.error) {
-        countUp.start();
-    } else {
-        console.error(countUp.error);
-    }
+    // Formulario de testimonio
+    $('#form-testimonio').on('submit', function (e) {
+        e.preventDefault();
 
-    // Animación de hover en las cards
-    $('.card').hover(
-        function() {
-            // Animación cuando el mouse entra en la card
-            $(this).animate({
-                scale: 1.05
-            }, 200); // Aumenta ligeramente el tamaño de la card
-        },
-        function() {
-            // Animación cuando el mouse sale de la card
-            $(this).animate({
-                scale: 1
-            }, 200); // Restaura al tamaño original
+        const nombre = $('#nombre');
+        const mensaje = $('#mensaje');
+        let valido = true;
+
+        // Limpiar errores anteriores
+        nombre.removeClass('is-invalid');
+        mensaje.removeClass('is-invalid');
+
+        // Validaciones
+        if (nombre.val().trim() === '') {
+            nombre.addClass('is-invalid');
+            valido = false;
         }
-    );
+        if (mensaje.val().trim() === '') {
+            mensaje.addClass('is-invalid');
+            valido = false;
+        }
 
-    // Spinner del formulario (para simular la carga)
-    $('#newsletter-form').on('submit', function(e) {
-        e.preventDefault(); // Previene el envío por defecto del formulario
-        $('#spinner').show(); // Muestra el spinner
+        if (valido) {
+            // Agregar testimonio al carrusel
+            const nuevoItem = $(`
+                <div class="carousel-item">
+                    <blockquote class="testimonial-card">
+                        <p>"${mensaje.val().trim()}"</p>
+                        <footer>- ${nombre.val().trim()}</footer>
+                    </blockquote>
+                </div>
+            `);
 
-        // Simulamos una solicitud de carga (por ejemplo, con setTimeout)
-        setTimeout(function() {
-            $('#spinner').hide(); // Oculta el spinner
-            alert('¡Gracias por suscribirte!');
-        }, 2000); // Simula que la carga dura 2 segundos
+            $('.carousel-item.active').removeClass('active');
+            nuevoItem.addClass('active');
+            $('.carousel-inner').append(nuevoItem);
+
+            // Mostrar mensaje de agradecimiento
+            $('#mensaje-exito').removeClass('d-none');
+
+            // Resetear formulario
+            this.reset();
+
+            // Ocultar mensaje después de 4 segundos
+            setTimeout(() => {
+                $('#mensaje-exito').addClass('d-none');
+            }, 4000);
+        }
     });
-});
+
+    $(document).ready(function () {
+        $("#newsletter-footer-form").on("submit", function (event) {
+          event.preventDefault();
+      
+          var email = $("#footer-email").val();
+          if (validateEmail(email)) {
+            $("#footer-spinner").show();
+            $("#footer-error").hide();
+      
+            setTimeout(function () {
+              $("#footer-spinner").hide();
+              alert("¡Gracias por suscribirte!");
+            }, 2000);
+          } else {
+            $("#footer-error").show();
+          }
+        });
+      
+        function validateEmail(email) {
+          var regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/;
+          return regex.test(email);
+        }
+      });
+      

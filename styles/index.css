@@ -1,33 +1,82 @@
-/* Estilos para el botón en el header */
-#mobileMenuBtn {
-    background-color: transparent; /* Botón transparente */
-    border: none; /* Sin borde */
-    color: white; /* Ícono blanco */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 40%; /* MÁS ABAJO que antes */
-    right: 20px; /* A la derecha */
-    z-index: 1000; /* Por encima de otros elementos */
-    transform: translateY(0); /* Alineación vertical */
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hacer el ícono más grande */
-#mobileMenuBtn i {
+/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
+.mobile-menu-container {
+    z-index: 2000;
+    position: absolute;
+    top: 60px; /* Ajustá este valor según la altura que querés */
+    right: 20px;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu {
+    position: relative;
+}
+
+.desplegar {
+    background: none;
     color: white;
-    font-size: 2rem;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
-#mobileMenuBtn:hover {
-    background-color: transparent;
-    box-shadow: none;
+.desplegar span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* MENÚ DESPLEGABLE */
+.mega-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #634ebb;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    margin-top: 10px;
+    width: max-content;
+}
+
+.container.py-5 h2{
+    font-family: 'Boldonse', sans-serif;
+    color: #634ebb;
+    font-weight: bolder;
+}
+
+#toggle-menu:checked + label + .mega-menu {
+    display: block;
+}
+
+.mega-menu li {
+    margin: 10px 0;
+}
+
+.mega-menu li a {
+    color: white;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
-.navbar-nav a{
-    font-family: 'montserrat';
+/* Estilo de la barra de navegación */
+.navbar-nav a {
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #643ebb;
 }
-
 
 /* Estilo para la sección Hero */
 .hero {
@@ -84,72 +133,190 @@
     }
 }
 
+/* Estilo de las cards */
+.card {
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados se vean bien */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
+}
 
-
-/* Animación en las cards */
 .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Aumenta la sombra en hover */
 }
 
-/* Animación de spinner */
-#spinner {
-    margin-top: 10px;
+/* Imagen de la tarjeta */
+.card-img-top {
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+    transition: transform 0.3s ease; /* Transición para zoom */
 }
 
-/* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
-.mobile-menu-container {
-    z-index: 2000;
-    position: absolute;
-    top: 60px; /* Ajustá este valor según la altura que querés */
-    right: 20px;
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Efecto de zoom en hover */
 }
 
-/* BOTÓN HAMBURGUESA */
-.menu {
-    position: relative;
+/* Título y descripción */
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #643ebb;
+    margin-bottom: 10px;
 }
 
-.desplegar {
-    background: none;
-    color: white;
-    padding: 10px 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 1rem;
+.card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
 }
 
-.desplegar span {
-    font-weight: 700;
-    font-size: 24px;
+/* Card body (cuerpo de la tarjeta) */
+.card-body {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado */
+    text-align: center;
 }
 
-/* MENÚ DESPLEGABLE */
-.mega-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #634ebb;
-    padding: 10px;
-    border-radius: 10px;
-    list-style: none;
-    margin-top: 10px;
-    width: max-content;
+/* Botón en el footer de la tarjeta */
+.card-footer {
+    background-color: transparent;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 10px 0;
 }
 
-#toggle-menu:checked + label + .mega-menu {
-    display: block;
-}
-
-.mega-menu li {
-    margin: 10px 0;
-}
-
-.mega-menu li a {
-    color: white;
+.card-footer a {
     text-decoration: none;
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: bold;
+    color: #643ebb;
+    transition: color 0.3s ease;
 }
+
+.card-footer a:hover {
+    color: #9575cd; /* Cambia el color en hover */
+}
+
+/* Ajuste de márgenes y padding en las clases destacadas */
+.container.py-5 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row.g-4 {
+    display: flex;
+    justify-content: space-around; /* Alinea las tarjetas de manera más uniforme */
+    flex-wrap: wrap;
+}
+
+/* Sección de testimonios */
+.testimonios-section {
+    background: linear-gradient(135deg, #9575cd, #7c4dff); /* Fondo degradado más suave */
+    color: white; /* Texto en blanco */
+    padding: 2rem 0; /* Espaciado para que no se vea demasiado apretado */
+    margin-bottom: 0; /* Eliminar el margen inferior para evitar el espacio extra */
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más claro y translúcido */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    font-style: italic;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    color: white; /* Asegurarse que el texto sea blanco */
+}
+
+.testimonios-section h2,
+.testimonios-section h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white; /* Asegurarse de que los títulos estén en blanco */
+}
+
+/* Estilo para el formulario de testimonios */
+#form-testimonio input,
+#form-testimonio textarea {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #fff; /* Fondo blanco para que se vea bien */
+}
+
+/* Botón en el formulario de testimonios */
+#form-testimonio .btn {
+    background-color: white;
+    color: #6a1b9a;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10px; /* Asegura que haya separación del campo de texto */
+}
+
+#form-testimonio .btn:hover {
+    background-color: #f3e5f5;
+}
+
+/* Estilo para las tarjetas de testimonio */
+.testimonial-card footer {
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: normal;
+    color: #fff; /* Asegurarse de que el texto en el pie de la tarjeta también sea blanco */
+}
+
+
+
+.footer-separado {
+    background-color: #4a148c;
+    color: white;
+    padding: 3rem 1rem;
+  }
+  
+  .footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .footer-map {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .footer-info {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .footer-info h4 {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .footer-social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.4rem;
+  }
+  
+  .footer-social-icons a:hover {
+    color: #ffd54f;
+  }
+  
+  #newsletter-footer-form .form-control {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  #newsletter-footer-form .btn {
+    border-radius: 0 5px 5px 0;
+  }
+  
