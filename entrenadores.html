@@ -16,6 +16,12 @@
 
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles/entrenadores.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <!-- NAVBAR solo para escritorio -->
@@ -58,94 +64,203 @@
         </nav>
     </div>
 
-    <!-- Sección de Entrenadores -->
     <section class="entrenadores py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Conoce a Nuestros Entrenadores</h2>
-            <div class="row">
-                <!-- Entrenador 1 -->
-                <div class="col-md-4">
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <img src="trainer1.jpg" alt="Entrenador 1" class="card-img-top">
-                                    <h5>Juan Pérez</h5>
-                                </div>
-                                <div class="card-back">
-                                    <p>Especialidad: Yoga</p>
-                                    <p>Contacto: juan@example.com</p>
-                                    <!-- Barras de habilidades dentro de la tarjeta -->
-                                    <div class="habilidades">
-                                        <label for="fuerza">Fuerza</label>
-                                        <progress id="fuerza" value="0" max="100"></progress>
-                                    </div>
-                                    <div class="habilidades">
-                                        <label for="flexibilidad">Flexibilidad</label>
-                                        <progress id="flexibilidad" value="0" max="100"></progress>
-                                    </div>
-                                </div>
-                            </div>
+          <h2 class="text-center mb-4">CONOCE A NUESTROS ENTRENADORES</h2>
+          <div class="row g-4">
+            <!-- ENTRENADORES (1 por disciplina) -->
+            <!-- Aquí un ejemplo con una plantilla, replicado para los 6 -->
+            <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador1.jpg" class="card-img-top" alt="Yoga Trainer">
+                        <h5>Micaela Pereyra</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">YOGA</p>
+                        <p>Mica es la entrenadora que te enseña a conectar cuerpo y mente con calma y precisión. Con años de experiencia en yoga integral, te guía con paciencia y buena vibra para que salgas de cada clase más livianx, fuerte y centrado.
+                        </p>
+                        <div class="habilidades">
+                          <label>Dominio de cuerpo y mente</label>
+                          <progress id="dominio" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Flexibilidad y equilibrio</label>
+                          <progress id="flexibilidad" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
                         </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador2.jpg" class="card-img-top" alt="Pilates Trainer">
+                        <h5>Rocío Benitez</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">PILATES</p>
+                        <p>Rocío es exigente pero justa. Con su enfoque en técnica y control, sus clases de pilates son ideales para mejorar postura, tonificar y activar músculos que ni sabías que tenías. Si buscás resultados reales, ella es la indicada.
+                        </p>
+                        <div class="habilidades">
+                          <label>Control y Precición</label>
+                          <progress id="control" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Resistencia muscular avanzada</label>
+                          <progress id="resistencia" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
+                        </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                <!-- Entrenador 2 -->
-                <div class="col-md-4">
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <img src="trainer2.jpg" alt="Entrenador 2" class="card-img-top">
-                                    <h5>Ana Gómez</h5>
-                                </div>
-                                <div class="card-back">
-                                    <p>Especialidad: Pilates</p>
-                                    <p>Contacto: ana@example.com</p>
-                                    <!-- Barras de habilidades dentro de la tarjeta -->
-                                    <div class="habilidades">
-                                        <label for="cardio">Cardio</label>
-                                        <progress id="cardio" value="0" max="100"></progress>
-                                    </div>
-                                    <div class="habilidades">
-                                        <label for="resistencia">Resistencia</label>
-                                        <progress id="resistencia" value="0" max="100"></progress>
-                                    </div>
-                                </div>
-                            </div>
+              <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador3.jpg" class="card-img-top" alt="Zumba Trainer">
+                        <h5>Julieta Maidana</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">ZUMBA</p>
+                        <p>Juli transforma cada clase en una fiesta. Energía a mil, coreos que te sacan una sonrisa y un ritmo que no para. Ideal para quienes quieren entrenar sin sentir que están entrenando. ¡A moverse!
+                        </p>
+                        <div class="habilidades">
+                          <label>Ritmo y expresion corporal</label>
+                          <progress id="ritmo" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Energía contagiosa</label>
+                          <progress id="energia" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
                         </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
 
-                <!-- Entrenador 3 -->
-                <div class="col-md-4">
-                    <div class="card-container">
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <img src="trainer3.jpg" alt="Entrenador 3" class="card-img-top">
-                                    <h5>Carlos López</h5>
-                                </div>
-                                <div class="card-back">
-                                    <p>Especialidad: Entrenamiento Funcional</p>
-                                    <p>Contacto: carlos@example.com</p>
-                                    <!-- Barras de habilidades dentro de la tarjeta -->
-                                    <div class="habilidades">
-                                        <label for="fuerza2">Fuerza</label>
-                                        <progress id="fuerza2" value="0" max="100"></progress>
-                                    </div>
-                                    <div class="habilidades">
-                                        <label for="flexibilidad2">Flexibilidad</label>
-                                        <progress id="flexibilidad2" value="0" max="100"></progress>
-                                    </div>
-                                </div>
-                            </div>
+              <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador4.jpg" class="card-img-top" alt="Fuerza Trainer">
+                        <h5>Brenda Godoy</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">FUERZA</p>
+                        <p>Brenda no cree en excusas. Es fan de levantar pesado, motivarte al límite y enseñarte que la fuerza no es solo física. Si querés ganar potencia, técnica y confianza, sus clases son tu lugar.
+                        </p>
+                        <div class="habilidades">
+                          <label>Potencia y técnica</label>
+                          <progress id="potencia" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Constancia y disciplina</label>
+                          <progress id="constancia" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
                         </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador5.jpg" class="card-img-top" alt="Cardio Trainer">
+                        <h5>Ezequiel Cabrera</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">CARDIO</p>
+                        <p>Eze es adrenalina pura. Sus entrenamientos de cardio son intensos, dinámicos y efectivos. Ideal para quienes quieren mejorar resistencia, quemar calorías y no aburrirse nunca. No afloja, pero siempre con buena onda.
+                        </p>
+                        <div class="habilidades">
+                          <label>Resistencia de alto rendimiento</label>
+                          <progress id="resistenciaAR" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Versatilidad en circuitos</label>
+                          <progress id="versatilidad" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
+                        </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="card-inner">
+                      <div class="card-front">
+                        <img src="images/entrenador6.jpg" class="card-img-top" alt="HIIT Trainer">
+                        <h5>Fabián Quiroga</h5>
+                      </div>
+                      <div class="card-back">
+                        <p name="titulo">HIIT</p>
+                        <p>Fabián va al grano. Entrenamientos cortos, explosivos y funcionales. Si tenés poco tiempo y muchas ganas de ponerte en forma, sus rutinas HIIT son todo lo que necesitás. Directo, claro y motivador.</p>
+                        <div class="habilidades">
+                          <label>Explosividad controlada</label>
+                          <progress id="explosividad" value="0" max="100" class="progress-bar-custom fuerza"></progress>
+                          <label>Optimización de tiempo en entrenamiento</label>
+                          <progress id="optimizacion" value="0" max="100" class="progress-bar-custom flexibilidad"></progress>
+                        </div>
+                        <div class="rating mt-3">
+                            <input type="radio" name="rating1" id="star5-1" value="5"><label for="star5-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star4-1" value="4"><label for="star4-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star3-1" value="3"><label for="star3-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star2-1" value="2"><label for="star2-1"><i class="fa fa-star"></i></label>
+                            <input type="radio" name="rating1" id="star1-1" value="1"><label for="star1-1"><i class="fa fa-star"></i></label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      
+            
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- jQuery desde CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

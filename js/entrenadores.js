@@ -3,39 +3,66 @@ $(document).ready(function() {
     $('.card').hover(
         function() {
             // Cuando se pasa el mouse sobre la tarjeta (se voltea hacia la parte trasera)
-            var idFuerza = $(this).find('#fuerza');
+            var idDominio = $(this).find('#dominio');
             var idFlexibilidad = $(this).find('#flexibilidad');
-            var idCardio = $(this).find('#cardio');
+            var idControl = $(this).find('#control');
             var idResistencia = $(this).find('#resistencia');
-            var idFuerza2 = $(this).find('#fuerza2');
-            var idFlexibilidad2 = $(this).find('#flexibilidad2');
+            var idRitmo = $(this).find('#ritmo');
+            var idEnergia = $(this).find('#energia');
+            var idPotencia = $(this).find('#potencia');
+            var idConstancia = $(this).find('#constancia');
+            var idResistenciaAR = $(this).find('#resistenciaAR');
+            var idVersatilidad = $(this).find('#versatilidad');
+            var idExplosividad = $(this).find('#explosividad');
+            var idOptimizacion = $(this).find('#optimizacion');
 
             // Animar las barras de habilidad con un retraso
             setTimeout(function() {
-                idFuerza.val(0).animate({value: 80}, 2000);  // Animación para la barra de Fuerza
+                idDominio.val(0).animate({value: 86}, 2000);  // Animación para la barra de Fuerza
                 idFlexibilidad.val(0).animate({value: 70}, 2000);  // Animación para la barra de Flexibilidad
-                idCardio.val(0).animate({value: 85}, 2000);  // Animación para la barra de Cardio
-                idResistencia.val(0).animate({value: 90}, 2000);  // Animación para la barra de Resistencia
-                idFuerza2.val(0).animate({value: 75}, 2000);  // Animación para la barra de Fuerza
-                idFlexibilidad2.val(0).animate({value: 65}, 2000);  // Animación para la barra de Flexibilidad
+                idControl.val(0).animate({value: 92}, 2000);  // Animación para la barra de Cardio
+                idResistencia.val(0).animate({value: 88}, 2000);  // Animación para la barra de Resistencia
+                idRitmo.val(0).animate({value: 96}, 2000);  // Animación para la barra de Fuerza
+                idEnergia.val(0).animate({value: 98}, 2000); 
+                idPotencia.val(0).animate({value: 86}, 2000);  // Animación para la barra de Fuerza
+                idConstancia.val(0).animate({value: 70}, 2000);  // Animación para la barra de Flexibilidad
+                idResistenciaAR.val(0).animate({value: 92}, 2000);  // Animación para la barra de Cardio
+                idVersatilidad.val(0).animate({value: 88}, 2000);  // Animación para la barra de Resistencia
+                idExplosividad.val(0).animate({value: 96}, 2000);  // Animación para la barra de Fuerza
+                idOptimizacion.val(0).animate({value: 98}, 2000); 
             }, 300);  // Retardo de 300ms antes de iniciar la animación
         },
         function() {
             // Cuando el mouse sale de la tarjeta (se voltea hacia la parte frontal)
-            var idFuerza = $(this).find('#fuerza');
+            var idDominio = $(this).find('#dominio');
             var idFlexibilidad = $(this).find('#flexibilidad');
-            var idCardio = $(this).find('#cardio');
+            var idControl = $(this).find('#control');
             var idResistencia = $(this).find('#resistencia');
-            var idFuerza2 = $(this).find('#fuerza2');
-            var idFlexibilidad2 = $(this).find('#flexibilidad2');
+            var idRitmo = $(this).find('#ritmo');
+            var idEnergia = $(this).find('#energia');
+            var idPotencia = $(this).find('#potencia');
+            var idConstancia = $(this).find('#constancia');
+            var idResistenciaAR = $(this).find('#resistenciaAR');
+            var idVersatilidad = $(this).find('#versatilidad');
+            var idExplosividad = $(this).find('#explosividad');
+            var idOptimizacion = $(this).find('#optimizacion');
 
             // Resetear las barras a 0 cuando el mouse sale de la tarjeta
-            idFuerza.val(0);
+            idDominio.val(0);
             idFlexibilidad.val(0);
-            idCardio.val(0);
+            idControl.val(0);
             idResistencia.val(0);
-            idFuerza2.val(0);
-            idFlexibilidad2.val(0);
+            idRitmo.val(0);
+            idEnergia.val(0);
+            idPotencia.val(0);
+            idConstancia.val(0);
+            idResistenciaAR.val(0);
+            idVersatilidad.val(0);
+            idExplosividad.val(0);
+            idOptimizacion.val(0);
         }
+
+        
     );
 });
+
