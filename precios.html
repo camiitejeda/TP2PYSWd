@@ -60,15 +60,104 @@
   </div>
 
   <div class="container py-5">
-    <h1 class="text-center mb-4">Planes de Membresía</h1>
+    <h1 class="main-title">Compará nuestros planes</h1>
 
-    <!-- Toggle mensual/anual -->
-    <div class="d-flex justify-content-center mb-4">
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="togglePrecios">
-        <label class="form-check-label" for="togglePrecios">Mostrar precios anuales</label>
+    <!-- TOGGLE UNIFICADO -->
+<div class="toggle-container">
+  <span>Mostrar precios anuales</span>
+  <label class="switch">
+    <input type="checkbox" id="togglePrecios"> <!-- MISMO ID -->
+    <span class="slider"></span>
+  </label>
+</div>
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="card basic">
+        <div class="card__content">
+          <div class="card__image"></div>
+          <h3 class="card__title">Plan Básico</h3>
+          <p class="card__description">Acceso al gimnasio y vestuarios de 8 a 20hs.</p>
+          <div class="card__footer">
+            <span class="card__price" data-mensual="12000" data-anual="132000">$12000</span>
+            <div class="card__button">
+              <svg height="16" width="16" viewBox="0 0 24 24">
+                  <path
+                    stroke-width="2"
+                    stroke="currentColor"
+                    d="M4 12H20M12 4V20"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card regular">
+        <div class="card__content">
+          <div class="card__image"></div>
+          <span class="card__badge">POPULAR</span>
+          <h3 class="card__title">Plan Regular</h3>
+          <p class="card__description">Acceso 24hs al gimansio e incluye clases grupales y zona de peso libre.</p>
+          <div class="card__footer">
+            <span class="card__price" data-mensual="18000" data-anual="198000">$18000</span>
+            <div class="card__button">
+              <svg height="16" width="16" viewBox="0 0 24 24">
+                  <path
+                    stroke-width="2"
+                    stroke="currentColor"
+                    d="M4 12H20M12 4V20"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card premium">
+        <div class="card__content">
+          <div class="card__image"></div>
+          <h3 class="card__title">Plan Premium</h3>
+          <p class="card__description">Todo incluido + sesiones totalmente personalizadas.</p>
+          <div class="card__footer">
+            <span class="card__price" data-mensual="25000" data-anual="275000">$25000</span>
+            <div class="card__button"> 
+              <svg height="16" width="16" viewBox="0 0 24 24">
+                  <path
+                    stroke-width="2"
+                    stroke="currentColor"
+                    d="M4 12H20M12 4V20"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  
+    <script>
+      const toggle = document.getElementById('price-toggle');
+      const prices = document.querySelectorAll('.card__price');
+  
+      toggle.addEventListener('change', () => {
+        prices.forEach(price => {
+          price.textContent = toggle.checked
+            ? `$${price.dataset.anual}`
+            : `$${price.dataset.mensual}`;
+        });
+      });
+    </script>
+
+
 
     <!-- Tabla de precios -->
     <div class="table-responsive">
@@ -88,19 +177,19 @@
             <td>Básico</td>
             <td>Solo gimnasio</td>
             <td>2 por semana</td>
-            <td class="precio" data-mensual="25" data-anual="240">$25</td>
+            <td class="precio" data-mensual="12000" data-anual="132000">$25</td>
           </tr>
           <tr>
             <td>Estándar</td>
             <td>Gimnasio + clases</td>
             <td>3 por semana</td>
-            <td class="precio" data-mensual="40" data-anual="384">$40</td>
+            <td class="precio" data-mensual="18000" data-anual="198000">$40</td>
           </tr>
           <tr>
             <td>Premium</td>
             <td>Todo incluido</td>
             <td>Ilimitadas</td>
-            <td class="precio" data-mensual="60" data-anual="576">$60</td>
+            <td class="precio" data-mensual="25000" data-anual="275000">$60</td>
           </tr>
         </tbody>
       </table>
