@@ -10,8 +10,9 @@ body {
   }
   
   h2 {
-    color: #3f287b;
+    color: #643ebb;
     font-weight: bold;
+    font-family: 'boldonse', sans-serif;
   }
   
   form {
@@ -24,6 +25,15 @@ body {
 
 
 
+.mb-3 label{
+  font-family: 'montserrat';
+  font-weight: bold;
+}
+
+.mb-3 option{
+  font-family: 'montserrat';
+  font-weight: bold;
+}
   
 /* CONTENEDOR DEL MENÚ MÓVIL EN EL HEADER */
 .mobile-menu-container {
